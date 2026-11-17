@@ -1,0 +1,10 @@
+@'
+jdk:
+  - openjdk17
+
+before_install:
+  - git config --global --add safe.directory /build
+
+install:
+  - sbt --server clean publishM2
+'@ | Set-Content -Encoding UTF8 .\jitpack.yml
