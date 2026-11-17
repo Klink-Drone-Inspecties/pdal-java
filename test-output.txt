@@ -1,0 +1,905 @@
+[info] entering thin client - BEEP WHIRR
+[info] starting sbt server in the background
+[info] use 'sbt shutdown' to shutdown the server
+[info]  
+[info] welcome to sbt 2.0.11 (Eclipse Adoptium Java 25.0.4.1)
+[info] loading project definition from C:\Users\merij\pdal-java\project
+[info] set current project to pdal-jni (in build file:/C:/Users/merij/pdal-java/)
+[info] new client connected: network-1
+[info] Building library with native build tool CMake
+[info] Using CMake version 4.5.0
+[error] CMake Warning:
+[error]   Ignoring extra path from command line:
+[error]    "C:/Users/merij/pdal-java/native/target/native/x86_64-cygwin_nt-10.0-26200/build/405"
+[info] -- JNI include directories: C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/include;C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/include/win32;C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/include
+[info] -- Configuring done (0.1s)
+[info] -- Generating done (0.0s)
+[info] -- Build files have been written to: C:/Users/merij/pdal-java/native/target/native/x86_64-cygwin_nt-10.0-26200/build
+[error] Warning: NMake does not support parallel builds. Ignoring parallel build command line option.
+[info] [100%] Built target pdaljni.2.10
+[info] -- Install configuration: "Release"
+[info] -- Up-to-date: C:/Users/merij/pdal-java/native/target/native/x86_64-cygwin_nt-10.0-26200/bin/lib/pdaljni.2.10.lib
+[info] -- Up-to-date: C:/Users/merij/pdal-java/native/target/native/x86_64-cygwin_nt-10.0-26200/bin/bin/pdaljni.2.10.dll
+[info] PipelineSpec:
+[info] Pipeline execution
+[info] - should throw ExecutionException when bad pipeline json passed into the constructor
+[info] - should execute pipeline
+[info] - should get pipeline LogLevel
+[info] - should create pointViews iterator
+[info] - should have a valid point view size
+[info] - should read a valid (X, Y, Z) data
+[info] - should read a valid packed data
+[info] - should read the whole packed point and grab only one dim
+[info] - should read all packed points and grab only one point out of it
+[info] - should read a valid value by name
+[info] - should read correctly data as a packed point
+[info] - layout should have a valid number of dims
+[info] - should find a dim by name
+[info] - dim sizes should be of a valid size
+[info] - should read all packed points valid
+[info] - should read crs correct
+[info] - should fail with InitializationException when the input json is null
+[info] - should fail with ExecutionException when the input json is invalid
+[info] - should get pipeline
+[info] - should get schema
+[info] - should get metadata *** FAILED ***
+[info]   Right({
+[info]     "metadata" : {
+[info]       "readers.las" : {
+[info]         "comp_spatialreference" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "compressed" : false,
+[info]         "copc" : false,
+[info]         "count" : 1065,
+[info]         "creation_doy" : 0,
+[info]         "creation_year" : 0,
+[info]         "dataformat_id" : 3,
+[info]         "dataoffset" : 229,
+[info]         "filesource_id" : 0,
+[info]         "global_encoding" : 0,
+[info]         "global_encoding_base64" : "AAA=",
+[info]         "header_size" : 227,
+[info]         "major_version" : 1,
+[info]         "maxx" : 638982.55,
+[info]         "maxy" : 853535.43,
+[info]         "maxz" : 586.38,
+[info]         "minor_version" : 2,
+[info]         "minx" : 635619.85,
+[info]         "miny" : 848899.7,
+[info]         "minz" : 406.59,
+[info]         "offset_x" : 0,
+[info]         "offset_y" : 0,
+[info]         "offset_z" : 0,
+[info]         "point_length" : 34,
+[info]         "project_id" : "00000000-0000-0000-0000-000000000000",
+[info]         "scale_x" : 0.01,
+[info]         "scale_y" : 0.01,
+[info]         "scale_z" : 0.01,
+[info]         "software_id" : "TerraScan",
+[info]         "spatialreference" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "srs" : {
+[info]           "compoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "horizontal" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "isgeocentric" : false,
+[info]           "isgeographic" : false,
+[info]           "json" : {
+[info]             "type" : "ProjectedCRS",
+[info]             "name" : "NAD83(HARN) / Oregon LCC (m)",
+[info]             "base_crs" : {
+[info]               "type" : "GeographicCRS",
+[info]               "name" : "NAD83(HARN)",
+[info]               "datum" : {
+[info]                 "type" : "GeodeticReferenceFrame",
+[info]                 "name" : "NAD83 (High Accuracy Reference Network)",
+[info]                 "ellipsoid" : {
+[info]                   "name" : "GRS 1980",
+[info]                   "semi_major_axis" : 6378137,
+[info]                   "inverse_flattening" : 298.257222101
+[info]                 }
+[info]               },
+[info]               "coordinate_system" : {
+[info]                 "subtype" : "ellipsoidal",
+[info]                 "axis" : [
+[info]                   {
+[info]                     "name" : "Geodetic latitude",
+[info]                     "abbreviation" : "Lat",
+[info]                     "direction" : "north",
+[info]                     "unit" : "degree"
+[info]                   },
+[info]                   {
+[info]                     "name" : "Geodetic longitude",
+[info]                     "abbreviation" : "Lon",
+[info]                     "direction" : "east",
+[info]                     "unit" : "degree"
+[info]                   }
+[info]                 ]
+[info]               },
+[info]               "id" : {
+[info]                 "authority" : "EPSG",
+[info]                 "code" : 4152
+[info]               }
+[info]             },
+[info]             "conversion" : {
+[info]               "name" : "unnamed",
+[info]               "method" : {
+[info]                 "name" : "Lambert Conic Conformal (2SP)",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 9802
+[info]                 }
+[info]               },
+[info]               "parameters" : [
+[info]                 {
+[info]                   "name" : "Latitude of false origin",
+[info]                   "value" : 41.75,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8821
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Longitude of false origin",
+[info]                   "value" : -120.5,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8822
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Latitude of 1st standard parallel",
+[info]                   "value" : 43,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8823
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Latitude of 2nd standard parallel",
+[info]                   "value" : 45.5,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8824
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Easting at false origin",
+[info]                   "value" : 400000,
+[info]                   "unit" : "metre",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8826
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Northing at false origin",
+[info]                   "value" : 0,
+[info]                   "unit" : "metre",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8827
+[info]                   }
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "coordinate_system" : {
+[info]               "subtype" : "Cartesian",
+[info]               "axis" : [
+[info]                 {
+[info]                   "name" : "Easting",
+[info]                   "abbreviation" : "",
+[info]                   "direction" : "east",
+[info]                   "unit" : "metre"
+[info]                 },
+[info]                 {
+[info]                   "name" : "Northing",
+[info]                   "abbreviation" : "",
+[info]                   "direction" : "north",
+[info]                   "unit" : "metre"
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "id" : {
+[info]               "authority" : "EPSG",
+[info]               "code" : 2993
+[info]             }
+[info]           },
+[info]           "prettycompoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "prettywkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "proj4" : "+proj=lcc +lat_0=41.75 +lon_0=-120.5 +lat_1=43 +lat_2=45.5 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+[info]           "units" : {
+[info]             "horizontal" : "metre",
+[info]             "vertical" : ""
+[info]           },
+[info]           "vertical" : "",
+[info]           "wkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]"
+[info]         },
+[info]         "system_id" : ""
+[info]       }
+[info]     }
+[info]   }) was not equal to Right({
+[info]     "metadata" : {
+[info]       "readers.las" : {
+[info]         "comp_spatialreference" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "compressed" : false,
+[info]         "copc" : false,
+[info]         "count" : 1065,
+[info]         "creation_doy" : 0,
+[info]         "creation_year" : 0,
+[info]         "dataformat_id" : 3,
+[info]         "dataoffset" : 229,
+[info]         "filesource_id" : 0,
+[info]         "global_encoding" : 0,
+[info]         "global_encoding_base64" : "AAA=",
+[info]         "header_size" : 227,
+[info]         "major_version" : 1,
+[info]         "maxx" : 638982.55,
+[info]         "maxy" : 853535.43,
+[info]         "maxz" : 586.38,
+[info]         "minor_version" : 2,
+[info]         "minx" : 635619.85,
+[info]         "miny" : 848899.7,
+[info]         "minz" : 406.59,
+[info]         "offset_x" : 0,
+[info]         "offset_y" : 0,
+[info]         "offset_z" : 0,
+[info]         "point_length" : 34,
+[info]         "project_id" : "00000000-0000-0000-0000-000000000000",
+[info]         "scale_x" : 0.01,
+[info]         "scale_y" : 0.01,
+[info]         "scale_z" : 0.01,
+[info]         "software_id" : "TerraScan",
+[info]         "spatialreference" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "srs" : {
+[info]           "compoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "horizontal" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "isgeocentric" : false,
+[info]           "isgeographic" : false,
+[info]           "json" : {
+[info]             "type" : "ProjectedCRS",
+[info]             "name" : "NAD83(HARN) / Oregon LCC (m)",
+[info]             "base_crs" : {
+[info]               "type" : "GeographicCRS",
+[info]               "name" : "NAD83(HARN)",
+[info]               "datum" : {
+[info]                 "type" : "GeodeticReferenceFrame",
+[info]                 "name" : "NAD83 (High Accuracy Reference Network)",
+[info]                 "ellipsoid" : {
+[info]                   "name" : "GRS 1980",
+[info]                   "semi_major_axis" : 6378137,
+[info]                   "inverse_flattening" : 298.257222101
+[info]                 }
+[info]               },
+[info]               "coordinate_system" : {
+[info]                 "subtype" : "ellipsoidal",
+[info]                 "axis" : [
+[info]                   {
+[info]                     "name" : "Geodetic latitude",
+[info]                     "abbreviation" : "Lat",
+[info]                     "direction" : "north",
+[info]                     "unit" : "degree"
+[info]                   },
+[info]                   {
+[info]                     "name" : "Geodetic longitude",
+[info]                     "abbreviation" : "Lon",
+[info]                     "direction" : "east",
+[info]                     "unit" : "degree"
+[info]                   }
+[info]                 ]
+[info]               },
+[info]               "id" : {
+[info]                 "authority" : "EPSG",
+[info]                 "code" : 4152
+[info]               }
+[info]             },
+[info]             "conversion" : {
+[info]               "name" : "unknown",
+[info]               "method" : {
+[info]                 "name" : "Lambert Conic Conformal (2SP)",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 9802
+[info]                 }
+[info]               },
+[info]               "parameters" : [
+[info]                 {
+[info]                   "name" : "Latitude of false origin",
+[info]                   "value" : 41.75,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8821
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Longitude of false origin",
+[info]                   "value" : -120.5,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8822
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Latitude of 1st standard parallel",
+[info]                   "value" : 43,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8823
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Latitude of 2nd standard parallel",
+[info]                   "value" : 45.5,
+[info]                   "unit" : "degree",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8824
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Easting at false origin",
+[info]                   "value" : 400000,
+[info]                   "unit" : "metre",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8826
+[info]                   }
+[info]                 },
+[info]                 {
+[info]                   "name" : "Northing at false origin",
+[info]                   "value" : 0,
+[info]                   "unit" : "metre",
+[info]                   "id" : {
+[info]                     "authority" : "EPSG",
+[info]                     "code" : 8827
+[info]                   }
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "coordinate_system" : {
+[info]               "subtype" : "Cartesian",
+[info]               "axis" : [
+[info]                 {
+[info]                   "name" : "Easting",
+[info]                   "abbreviation" : "E",
+[info]                   "direction" : "east",
+[info]                   "unit" : "metre"
+[info]                 },
+[info]                 {
+[info]                   "name" : "Northing",
+[info]                   "abbreviation" : "N",
+[info]                   "direction" : "north",
+[info]                   "unit" : "metre"
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "id" : {
+[info]               "authority" : "EPSG",
+[info]               "code" : 2993
+[info]             }
+[info]           },
+[info]           "prettycompoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "prettywkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]           "proj4" : "+proj=lcc +lat_0=41.75 +lon_0=-120.5 +lat_1=43 +lat_2=45.5 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+[info]           "units" : {
+[info]             "horizontal" : "metre",
+[info]             "vertical" : ""
+[info]           },
+[info]           "vertical" : "",
+[info]           "wkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]"
+[info]         },
+[info]         "system_id" : ""
+[info]       }
+[info]     }
+[info]   }) (PipelineSpec.scala:190)
+[info] - should get quickInfo
+[info] - should get quickInfo with metadata *** FAILED ***
+[info]   Right({
+[info]     "readers.las" : {
+[info]       "bounds" : {
+[info]         "maxx" : 638982.55,
+[info]         "maxy" : 853535.43,
+[info]         "maxz" : 586.38,
+[info]         "minx" : 635619.85,
+[info]         "miny" : 848899.7,
+[info]         "minz" : 406.59
+[info]       },
+[info]       "dimensions" : "X, Y, Z, Intensity, ReturnNumber, NumberOfReturns, ScanDirectionFlag, EdgeOfFlightLine, Classification, Synthetic, KeyPoint, Withheld, Overlap, ScanAngleRank, UserData, PointSourceId, GpsTime, Red, Green, Blue",
+[info]       "num_points" : 1065,
+[info]       "srs" : {
+[info]         "compoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "horizontal" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "isgeocentric" : false,
+[info]         "isgeographic" : false,
+[info]         "json" : {
+[info]           "type" : "ProjectedCRS",
+[info]           "name" : "NAD83(HARN) / Oregon LCC (m)",
+[info]           "base_crs" : {
+[info]             "type" : "GeographicCRS",
+[info]             "name" : "NAD83(HARN)",
+[info]             "datum" : {
+[info]               "type" : "GeodeticReferenceFrame",
+[info]               "name" : "NAD83 (High Accuracy Reference Network)",
+[info]               "ellipsoid" : {
+[info]                 "name" : "GRS 1980",
+[info]                 "semi_major_axis" : 6378137,
+[info]                 "inverse_flattening" : 298.257222101
+[info]               }
+[info]             },
+[info]             "coordinate_system" : {
+[info]               "subtype" : "ellipsoidal",
+[info]               "axis" : [
+[info]                 {
+[info]                   "name" : "Geodetic latitude",
+[info]                   "abbreviation" : "Lat",
+[info]                   "direction" : "north",
+[info]                   "unit" : "degree"
+[info]                 },
+[info]                 {
+[info]                   "name" : "Geodetic longitude",
+[info]                   "abbreviation" : "Lon",
+[info]                   "direction" : "east",
+[info]                   "unit" : "degree"
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "id" : {
+[info]               "authority" : "EPSG",
+[info]               "code" : 4152
+[info]             }
+[info]           },
+[info]           "conversion" : {
+[info]             "name" : "unnamed",
+[info]             "method" : {
+[info]               "name" : "Lambert Conic Conformal (2SP)",
+[info]               "id" : {
+[info]                 "authority" : "EPSG",
+[info]                 "code" : 9802
+[info]               }
+[info]             },
+[info]             "parameters" : [
+[info]               {
+[info]                 "name" : "Latitude of false origin",
+[info]                 "value" : 41.75,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8821
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Longitude of false origin",
+[info]                 "value" : -120.5,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8822
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Latitude of 1st standard parallel",
+[info]                 "value" : 43,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8823
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Latitude of 2nd standard parallel",
+[info]                 "value" : 45.5,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8824
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Easting at false origin",
+[info]                 "value" : 400000,
+[info]                 "unit" : "metre",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8826
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Northing at false origin",
+[info]                 "value" : 0,
+[info]                 "unit" : "metre",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8827
+[info]                 }
+[info]               }
+[info]             ]
+[info]           },
+[info]           "coordinate_system" : {
+[info]             "subtype" : "Cartesian",
+[info]             "axis" : [
+[info]               {
+[info]                 "name" : "Easting",
+[info]                 "abbreviation" : "",
+[info]                 "direction" : "east",
+[info]                 "unit" : "metre"
+[info]               },
+[info]               {
+[info]                 "name" : "Northing",
+[info]                 "abbreviation" : "",
+[info]                 "direction" : "north",
+[info]                 "unit" : "metre"
+[info]               }
+[info]             ]
+[info]           },
+[info]           "id" : {
+[info]             "authority" : "EPSG",
+[info]             "code" : 2993
+[info]           }
+[info]         },
+[info]         "prettycompoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "prettywkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "proj4" : "+proj=lcc +lat_0=41.75 +lon_0=-120.5 +lat_1=43 +lat_2=45.5 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+[info]         "units" : {
+[info]           "horizontal" : "metre",
+[info]           "vertical" : ""
+[info]         },
+[info]         "vertical" : "",
+[info]         "wkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]"
+[info]       }
+[info]     }
+[info]   }) was not equal to Right({
+[info]     "readers.las" : {
+[info]       "bounds" : {
+[info]         "maxx" : 638982.55,
+[info]         "maxy" : 853535.43,
+[info]         "maxz" : 586.38,
+[info]         "minx" : 635619.85,
+[info]         "miny" : 848899.7,
+[info]         "minz" : 406.59
+[info]       },
+[info]       "dimensions" : "X, Y, Z, Intensity, ReturnNumber, NumberOfReturns, ScanDirectionFlag, EdgeOfFlightLine, Classification, Synthetic, KeyPoint, Withheld, Overlap, ScanAngleRank, UserData, PointSourceId, GpsTime, Red, Green, Blue",
+[info]       "num_points" : 1065,
+[info]       "srs" : {
+[info]         "compoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "horizontal" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "isgeocentric" : false,
+[info]         "isgeographic" : false,
+[info]         "json" : "{\n  \"type\": \"ProjectedCRS\",\n  \"name\": \"NAD83(HARN) / Oregon LCC (m)\",\n  \"base_crs\": {\n    \"name\": \"NAD83(HARN)\",\n    \"datum\": {\n      \"type\": \"GeodeticReferenceFrame\",\n      \"name\": \"NAD83 (High Accuracy Reference Network)\",\n      \"ellipsoid\": {\n        \"name\": \"GRS 1980\",\n        \"semi_major_axis\": 6378137,\n        \"inverse_flattening\": 298.257222101\n      }\n    },\n    \"coordinate_system\": {\n      \"subtype\": \"ellipsoidal\",\n      \"axis\": [\n        {\n          \"name\": \"Geodetic latitude\",\n          \"abbreviation\": \"Lat\",\n          \"direction\": \"north\",\n          \"unit\": \"degree\"\n        },\n        {\n          \"name\": \"Geodetic longitude\",\n          \"abbreviation\": \"Lon\",\n          \"direction\": \"east\",\n          \"unit\": \"degree\"\n        }\n      ]\n    },\n    \"id\": {\n      \"authority\": \"EPSG\",\n      \"code\": 4152\n    }\n  },\n  \"conversion\": {\n    \"name\": \"unnamed\",\n    \"method\": {\n      \"name\": \"Lambert Conic Conformal (2SP)\",\n      \"id\": {\n        \"authority\": \"EPSG\",\n        \"code\": 9802\n      }\n    },\n    \"parameters\": [\n      {\n        \"name\": \"Latitude of false origin\",\n        \"value\": 41.75,\n        \"unit\": \"degree\",\n        \"id\": {\n          \"authority\": \"EPSG\",\n          \"code\": 8821\n        }\n      },\n      {\n        \"name\": \"Longitude of false origin\",\n        \"value\": -120.5,\n        \"unit\": \"degree\",\n        \"id\": {\n          \"authority\": \"EPSG\",\n          \"code\": 8822\n        }\n      },\n      {\n        \"name\": \"Latitude of 1st standard parallel\",\n        \"value\": 43,\n        \"unit\": \"degree\",\n        \"id\": {\n          \"authority\": \"EPSG\",\n          \"code\": 8823\n        }\n      },\n      {\n        \"name\": \"Latitude of 2nd standard parallel\",\n        \"value\": 45.5,\n        \"unit\": \"degree\",\n        \"id\": {\n          \"authority\": \"EPSG\",\n          \"code\": 8824\n        }\n      },\n      {\n        \"name\": \"Easting at false origin\",\n        \"value\": 400000,\n        \"unit\": \"metre\",\n        \"id\": {\n          \"authority\": \"EPSG\",\n          \"code\": 8826\n        }\n      },\n      {\n        \"name\": \"Northing at false origin\",\n        \"value\": 0,\n        \"unit\": \"metre\",\n        \"id\": {\n          \"authority\": \"EPSG\",\n          \"code\": 8827\n        }\n      }\n    ]\n  },\n  \"coordinate_system\": {\n    \"subtype\": \"Cartesian\",\n    \"axis\": [\n      {\n        \"name\": \"Easting\",\n        \"abbreviation\": \"\",\n        \"direction\": \"east\",\n        \"unit\": \"metre\"\n      },\n      {\n        \"name\": \"Northing\",\n        \"abbreviation\": \"\",\n        \"direction\": \"north\",\n        \"unit\": \"metre\"\n      }\n    ]\n  },\n  \"id\": {\n    \"authority\": \"EPSG\",\n    \"code\": 2993\n  }\n}",
+[info]         "prettycompoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "prettywkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "proj4" : "+proj=lcc +lat_0=41.75 +lon_0=-120.5 +lat_1=43 +lat_2=45.5 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+[info]         "units" : {
+[info]           "horizontal" : "metre",
+[info]           "vertical" : ""
+[info]         },
+[info]         "vertical" : "",
+[info]         "wkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]"
+[info]       }
+[info]     }
+[info]   }), and Right({
+[info]     "readers.las" : {
+[info]       "bounds" : {
+[info]         "maxx" : 638982.55,
+[info]         "maxy" : 853535.43,
+[info]         "maxz" : 586.38,
+[info]         "minx" : 635619.85,
+[info]         "miny" : 848899.7,
+[info]         "minz" : 406.59
+[info]       },
+[info]       "dimensions" : "X, Y, Z, Intensity, ReturnNumber, NumberOfReturns, ScanDirectionFlag, EdgeOfFlightLine, Classification, Synthetic, KeyPoint, Withheld, Overlap, ScanAngleRank, UserData, PointSourceId, GpsTime, Red, Green, Blue",
+[info]       "num_points" : 1065,
+[info]       "srs" : {
+[info]         "compoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "horizontal" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "isgeocentric" : false,
+[info]         "isgeographic" : false,
+[info]         "json" : {
+[info]           "type" : "ProjectedCRS",
+[info]           "name" : "NAD83(HARN) / Oregon LCC (m)",
+[info]           "base_crs" : {
+[info]             "type" : "GeographicCRS",
+[info]             "name" : "NAD83(HARN)",
+[info]             "datum" : {
+[info]               "type" : "GeodeticReferenceFrame",
+[info]               "name" : "NAD83 (High Accuracy Reference Network)",
+[info]               "ellipsoid" : {
+[info]                 "name" : "GRS 1980",
+[info]                 "semi_major_axis" : 6378137,
+[info]                 "inverse_flattening" : 298.257222101
+[info]               }
+[info]             },
+[info]             "coordinate_system" : {
+[info]               "subtype" : "ellipsoidal",
+[info]               "axis" : [
+[info]                 {
+[info]                   "name" : "Geodetic latitude",
+[info]                   "abbreviation" : "Lat",
+[info]                   "direction" : "north",
+[info]                   "unit" : "degree"
+[info]                 },
+[info]                 {
+[info]                   "name" : "Geodetic longitude",
+[info]                   "abbreviation" : "Lon",
+[info]                   "direction" : "east",
+[info]                   "unit" : "degree"
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "id" : {
+[info]               "authority" : "EPSG",
+[info]               "code" : 4152
+[info]             }
+[info]           },
+[info]           "conversion" : {
+[info]             "name" : "unnamed",
+[info]             "method" : {
+[info]               "name" : "Lambert Conic Conformal (2SP)",
+[info]               "id" : {
+[info]                 "authority" : "EPSG",
+[info]                 "code" : 9802
+[info]               }
+[info]             },
+[info]             "parameters" : [
+[info]               {
+[info]                 "name" : "Latitude of false origin",
+[info]                 "value" : 41.75,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8821
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Longitude of false origin",
+[info]                 "value" : -120.5,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8822
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Latitude of 1st standard parallel",
+[info]                 "value" : 43,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8823
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Latitude of 2nd standard parallel",
+[info]                 "value" : 45.5,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8824
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Easting at false origin",
+[info]                 "value" : 400000,
+[info]                 "unit" : "metre",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8826
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Northing at false origin",
+[info]                 "value" : 0,
+[info]                 "unit" : "metre",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8827
+[info]                 }
+[info]               }
+[info]             ]
+[info]           },
+[info]           "coordinate_system" : {
+[info]             "subtype" : "Cartesian",
+[info]             "axis" : [
+[info]               {
+[info]                 "name" : "Easting",
+[info]                 "abbreviation" : "",
+[info]                 "direction" : "east",
+[info]                 "unit" : "metre"
+[info]               },
+[info]               {
+[info]                 "name" : "Northing",
+[info]                 "abbreviation" : "",
+[info]                 "direction" : "north",
+[info]                 "unit" : "metre"
+[info]               }
+[info]             ]
+[info]           },
+[info]           "id" : {
+[info]             "authority" : "EPSG",
+[info]             "code" : 2993
+[info]           }
+[info]         },
+[info]         "prettycompoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "prettywkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "proj4" : "+proj=lcc +lat_0=41.75 +lon_0=-120.5 +lat_1=43 +lat_2=45.5 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+[info]         "units" : {
+[info]           "horizontal" : "metre",
+[info]           "vertical" : ""
+[info]         },
+[info]         "vertical" : "",
+[info]         "wkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]"
+[info]       }
+[info]     }
+[info]   }) was not equal to Right({
+[info]     "readers.las" : {
+[info]       "bounds" : {
+[info]         "maxx" : 638982.55,
+[info]         "maxy" : 853535.43,
+[info]         "maxz" : 586.38,
+[info]         "minx" : 635619.85,
+[info]         "miny" : 848899.7,
+[info]         "minz" : 406.59
+[info]       },
+[info]       "dimensions" : "X, Y, Z, Intensity, ReturnNumber, NumberOfReturns, ScanDirectionFlag, EdgeOfFlightLine, Classification, Synthetic, KeyPoint, Withheld, Overlap, ScanAngleRank, UserData, PointSourceId, GpsTime, Red, Green, Blue",
+[info]       "num_points" : 1065,
+[info]       "srs" : {
+[info]         "compoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "horizontal" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "isgeocentric" : false,
+[info]         "isgeographic" : false,
+[info]         "json" : {
+[info]           "type" : "ProjectedCRS",
+[info]           "name" : "NAD83(HARN) / Oregon LCC (m)",
+[info]           "base_crs" : {
+[info]             "type" : "GeographicCRS",
+[info]             "name" : "NAD83(HARN)",
+[info]             "datum" : {
+[info]               "type" : "GeodeticReferenceFrame",
+[info]               "name" : "NAD83 (High Accuracy Reference Network)",
+[info]               "ellipsoid" : {
+[info]                 "name" : "GRS 1980",
+[info]                 "semi_major_axis" : 6378137,
+[info]                 "inverse_flattening" : 298.257222101
+[info]               }
+[info]             },
+[info]             "coordinate_system" : {
+[info]               "subtype" : "ellipsoidal",
+[info]               "axis" : [
+[info]                 {
+[info]                   "name" : "Geodetic latitude",
+[info]                   "abbreviation" : "Lat",
+[info]                   "direction" : "north",
+[info]                   "unit" : "degree"
+[info]                 },
+[info]                 {
+[info]                   "name" : "Geodetic longitude",
+[info]                   "abbreviation" : "Lon",
+[info]                   "direction" : "east",
+[info]                   "unit" : "degree"
+[info]                 }
+[info]               ]
+[info]             },
+[info]             "id" : {
+[info]               "authority" : "EPSG",
+[info]               "code" : 4152
+[info]             }
+[info]           },
+[info]           "conversion" : {
+[info]             "name" : "unknown",
+[info]             "method" : {
+[info]               "name" : "Lambert Conic Conformal (2SP)",
+[info]               "id" : {
+[info]                 "authority" : "EPSG",
+[info]                 "code" : 9802
+[info]               }
+[info]             },
+[info]             "parameters" : [
+[info]               {
+[info]                 "name" : "Latitude of false origin",
+[info]                 "value" : 41.75,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8821
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Longitude of false origin",
+[info]                 "value" : -120.5,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8822
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Latitude of 1st standard parallel",
+[info]                 "value" : 43,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8823
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Latitude of 2nd standard parallel",
+[info]                 "value" : 45.5,
+[info]                 "unit" : "degree",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8824
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Easting at false origin",
+[info]                 "value" : 400000,
+[info]                 "unit" : "metre",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8826
+[info]                 }
+[info]               },
+[info]               {
+[info]                 "name" : "Northing at false origin",
+[info]                 "value" : 0,
+[info]                 "unit" : "metre",
+[info]                 "id" : {
+[info]                   "authority" : "EPSG",
+[info]                   "code" : 8827
+[info]                 }
+[info]               }
+[info]             ]
+[info]           },
+[info]           "coordinate_system" : {
+[info]             "subtype" : "Cartesian",
+[info]             "axis" : [
+[info]               {
+[info]                 "name" : "Easting",
+[info]                 "abbreviation" : "E",
+[info]                 "direction" : "east",
+[info]                 "unit" : "metre"
+[info]               },
+[info]               {
+[info]                 "name" : "Northing",
+[info]                 "abbreviation" : "N",
+[info]                 "direction" : "north",
+[info]                 "unit" : "metre"
+[info]               }
+[info]             ]
+[info]           },
+[info]           "id" : {
+[info]             "authority" : "EPSG",
+[info]             "code" : 2993
+[info]           }
+[info]         },
+[info]         "prettycompoundwkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "prettywkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",\n    GEOGCS[\"NAD83(HARN)\",\n        DATUM[\"NAD83_High_Accuracy_Reference_Network\",\n            SPHEROID[\"GRS 1980\",6378137,298.257222101,\n                AUTHORITY[\"EPSG\",\"7019\"]],\n            AUTHORITY[\"EPSG\",\"6152\"]],\n        PRIMEM[\"Greenwich\",0,\n            AUTHORITY[\"EPSG\",\"8901\"]],\n        UNIT[\"degree\",0.0174532925199433,\n            AUTHORITY[\"EPSG\",\"9122\"]],\n        AUTHORITY[\"EPSG\",\"4152\"]],\n    PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n    PARAMETER[\"latitude_of_origin\",41.75],\n    PARAMETER[\"central_meridian\",-120.5],\n    PARAMETER[\"standard_parallel_1\",43],\n    PARAMETER[\"standard_parallel_2\",45.5],\n    PARAMETER[\"false_easting\",400000],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"metre\",1,\n        AUTHORITY[\"EPSG\",\"9001\"]],\n    AXIS[\"Easting\",EAST],\n    AXIS[\"Northing\",NORTH],\n    AUTHORITY[\"EPSG\",\"2993\"]]",
+[info]         "proj4" : "+proj=lcc +lat_0=41.75 +lon_0=-120.5 +lat_1=43 +lat_2=45.5 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+[info]         "units" : {
+[info]           "horizontal" : "metre",
+[info]           "vertical" : ""
+[info]         },
+[info]         "vertical" : "",
+[info]         "wkt" : "PROJCS[\"NAD83(HARN) / Oregon LCC (m)\",GEOGCS[\"NAD83(HARN)\",DATUM[\"NAD83_High_Accuracy_Reference_Network\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6152\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4152\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",41.75],PARAMETER[\"central_meridian\",-120.5],PARAMETER[\"standard_parallel_1\",43],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"false_easting\",400000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"2993\"]]"
+[info]       }
+[info]     }
+[info]   }) (PipelineSpec.scala:201)
+[info] - should extract mesh in iterative fashion
+[info] - should extract mesh as a bulk
+[info] - should extract mesh directly by a triangle identifier
+[info] - should not extract mesh if it was not generated
+[info] - should rasterize mesh
+[info] - should not rasterize mesh if it was not generated
+[info] Run completed in 809 milliseconds.
+[info] Total number of tests run: 29
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 27, failed 2, canceled 0, ignored 0, pending 0
+[info] *** 2 TESTS FAILED ***
+[error] Failed tests:
+[error] 	io.pdal.PipelineSpec
+[error] elapsed time: 5 s
+[error] (core / Test / testQuick) sbt.TestsFailedException: Tests unsuccessful
+[0J

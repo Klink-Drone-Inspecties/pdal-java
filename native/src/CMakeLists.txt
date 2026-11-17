@@ -56,11 +56,13 @@ endif()
 include_directories(.)
 include_directories(include)
 include_directories(${JNI_INCLUDE_DIRS})
-if (APPLE)
+if(WIN32)
+    include_directories("$ENV{CONDA_PREFIX}/Library/include/libxml2")
+elseif(APPLE)
     include_directories(/usr/local/opt/libxml2/include/libxml2)
-else ()
+else()
     include_directories(/usr/include/libxml2)
-endif ()
+endif()
 
 # Sources
 file(GLOB LIB_SRC
