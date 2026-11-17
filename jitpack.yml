@@ -1,10 +1,6 @@
-@'
 jdk:
   - openjdk17
 
-before_install:
-  - git config --global --add safe.directory /build
-
 install:
-  - sbt --server clean publishM2
-'@ | Set-Content -Encoding UTF8 .\jitpack.yml
+  - wget -O sbt-launch.jar https://repo1.maven.org/maven2/org/scala-sbt/sbt-launch/2.0.11/sbt-launch-2.0.11.jar
+  - java -Xms2048m -Xmx2048m -jar sbt-launch.jar -Dsbt.log.noformat=true "clean; publishM2"
