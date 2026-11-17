@@ -1,5 +1,12 @@
 name := "pdal-jni"
 
+ThisBuild / publishTo := Some(
+  Resolver.file(
+    "Maven Local",
+    file(sys.props("user.home")) / ".m2" / "repository"
+  )(Resolver.mavenStylePatterns)
+)
+
 val scala212 = "2.12.21"
 val scala213 = "2.13.18"
 val scala3 = "3.9.0"
@@ -9,6 +16,12 @@ lazy val commonSettings = Seq(
   scalaVersion := scalaVersions.head,
   crossScalaVersions := scalaVersions,
   organization := "io.pdal",
+  publishTo := Some(
+    Resolver.file(
+      "Maven Local",
+      file(sys.props("user.home")) / ".m2" / "repository"
+   )
+  ),
   description := "PDAL JNI bindings",
   licenses := Seq("BSD" -> uri("https://github.com/PDAL/PDAL/blob/master/LICENSE.txt")),
   homepage := Some(uri("https://www.pdal.io")),
@@ -68,6 +81,9 @@ lazy val `core-scala` = project
 
 lazy val core = project
   .settings(commonSettings*)
+  .settings(
+    useIvy := false,
+  )
   .settings(name := "pdal")
   .settings(javah / target := (native / nativeCompile / sourceDirectory).value / "include")
   .settings(sbtJniCoreScope := Compile)
@@ -79,21 +95,25 @@ lazy val core = project
   )
   .dependsOn(Environment.dependOnNative(native % Runtime)*)
 
+
 lazy val native = project
   .settings(commonSettings*)
-  .settings(crossPaths := false)
-  .settings(name := "pdal-native")
-  .settings(nativeCompile / sourceDirectory := sourceDirectory.value)
-  // keep native binaries at native/target/native/<platform> (sbt 2 moved target under target/out)
-  .settings(nativeCompile / target := baseDirectory.value / "target" / "native" / nativePlatform.value)
   .settings(
+    useIvy := false,
+    crossPaths := false,
+    name := "pdal-native",
+    nativeCompile / sourceDirectory := sourceDirectory.value,
+    nativeCompile / target :=
+      baseDirectory.value / "target" / "native" / nativePlatform.value,
     Compile / unmanagedPlatformDependentNativeDirectories := Seq(
       "x86_64-linux" -> baseDirectory.value / "target/native/x86_64-linux/bin/",
       "x86_64-darwin" -> baseDirectory.value / "target/native/x86_64-darwin/bin/",
-      "arm64-darwin" -> baseDirectory.value / "target/native/arm64-darwin/bin/"
-    )
+      "arm64-darwin" -> baseDirectory.value / "target/native/arm64-darwin/bin/",
+      "x86_64-cygwin_nt-10.0-26200" -> baseDirectory.value / "target/native/x86_64-cygwin_nt-10.0-26200/bin/bin/"
+    ),
+    artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+    val classifier = artifact.classifier.map("-" + _).getOrElse("")
+    artifact.name + "-" + nativePlatform.value + "-" + module.revision + classifier + "." + artifact.extension
+   }
   )
-  .settings(artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
-    artifact.name + "-" + nativePlatform.value + "-" + module.revision + "." + artifact.extension
-  })
   .enablePlugins(JniNative, JniPackage)
